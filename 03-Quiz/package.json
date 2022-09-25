@@ -1,5 +1,5 @@
 {
-  "name": "03-quiz",
+  "name": "quizapp",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,6 +7,7 @@
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
+    "gsap": "^3.11.1",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },

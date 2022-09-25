@@ -1,21 +1,21 @@
 <script setup>
-import {defineProps, defineEmits} from "vue";
-import { useRouter } from 'vue-router'
+    import {defineProps} from "vue"
+    import {useRouter} from "vue-router"
 
-const router = useRouter()
-const { quiz } = defineProps(['quiz'])
+    const router = useRouter()
+    const {quiz} = defineProps(['quiz'])
 
-const navigateToQuiz = () => {
-  router.push(`/quiz/${quiz.id}`)
-}
+    const navigateToQuiz = () => {
+      router.push(`/quiz/${quiz.id}`)
+    }
 </script>
 
 <template>
     <div class="card" @click="navigateToQuiz">
-        <img :src="quiz.img">
+        <img :src="quiz.img" alt="">
         <div class="card-text">
-          <h2>{{ quiz.name }}</h2>
-          <p>15 questions</p>
+            <h2>{{ quiz.name }}</h2>
+            <p>{{ quiz.questions.length }} questions</p>
         </div>
     </div>
 </template>
@@ -25,7 +25,7 @@ const navigateToQuiz = () => {
     width: 310px;
     overflow: hidden;
     border-radius: 2%;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.116);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
     margin-bottom: 35px;
     margin-right: 20px;
     cursor: pointer;
@@ -33,8 +33,8 @@ const navigateToQuiz = () => {
 
   .card img {
     width: 100%;
-    margin: 0;
-    height: 190px
+    height: 190px;
+    margin: 0
   }
 
   .card .card-text {
