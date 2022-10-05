@@ -1,0 +1,17 @@
+@import "./base.css";
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh
+}
+
+.newline {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+}
