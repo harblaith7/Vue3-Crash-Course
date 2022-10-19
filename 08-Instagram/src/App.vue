@@ -1,25 +1,22 @@
-<script setup lang="ts">
-import Nav from "./components/Nav/Nav.vue"
+<script setup>
 import {onMounted} from "vue"
-import {useUserStore} from "./stores/user"
+import Nav from "./components/Nav.vue"
 import {RouterView} from "vue-router"
+import {useUserStore} from "./stores/users"
 
-const {getUser} = useUserStore()
+const userStore = useUserStore()
 
 onMounted(() => {
-  getUser()
+  userStore.getUser()
 })
 </script>
 
 <template>
-  <ALayout class="layout">
+  <main>
     <Nav />
     <RouterView />
-  </ALayout>
+  </main>
 </template>
 
-<style>
-.layout {
-  background-color: white
-}
+<style scoped>
 </style>
